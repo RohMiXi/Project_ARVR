@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CamRotate : MonoBehaviour
 {
-    //ÇöÀç°¢µµ
+    //ï¿½ï¿½ï¿½ç°¢ï¿½ï¿½
     Vector3 angle;
-    //¸¶¿ì½º °¨µµ
+    //ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ï¿½
     public float sensitivity = 200;
     // Start is called before the first frame update
     void Start()
