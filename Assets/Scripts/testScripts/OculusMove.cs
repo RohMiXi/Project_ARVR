@@ -26,11 +26,11 @@ public class OculusMove : MonoBehaviour
         // Touchpad/Joystick position
         if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 position))
         {
-            var inputVector = new Vector3(position.x, Physics.gravity.y, z: position.y);
+            var inputVector = new Vector3(-position.x, Physics.gravity.y, z: -position.y);
             var inputDirection = transform.TransformDirection(inputVector);
             var lookDirection = new Vector3(x: 0, _camera.transform.eulerAngles.y, z: 0);
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
-            character.Move(motion: newDirection * Time.deltaTime * 1f);
+            character.Move(motion: newDirection * Time.deltaTime * 5f);
         }
     }
 }
