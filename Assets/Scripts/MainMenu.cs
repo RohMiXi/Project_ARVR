@@ -1,41 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject Panel;
 
 
-    public void OnClickNewGame()
+    public void OpenPanel()
     {
-        Debug.Log("새 게임");
+        if(Panel !=null)
+        {
+            bool isActive = Panel.activeSelf;
+            Panel.SetActive(!isActive);
+        }
     }
 
-    public void OnClickLoad()
-    {
-        Debug.Log("불러오기");
-    }
 
-    public void OnClickOption()
-    {
-        Debug.Log("옵션");
-    }
+    // public void OnClickoptionbtn()
+    // {
+    //     Debug.Log("옵션");
+    // }
 
-    public void OnClickQuit()
-    {
-        Application.Quit();
-        Debug.Log("Qiut");
-    }
+    // public void OnClickbackbtn()
+    // {
+    //     Debug.Log("불러오기");
+    // }
+
 }
  
