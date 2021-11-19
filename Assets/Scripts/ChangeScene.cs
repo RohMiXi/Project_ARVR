@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void PlayGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void ExitGame()
+    public void BtnNewScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
+        SceneManager.LoadScene("Ending_Scene");
+    }    
 
 }
