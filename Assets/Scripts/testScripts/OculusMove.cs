@@ -17,10 +17,11 @@ public class OculusMove : MonoBehaviour
         character = GetComponent<CharacterController>();
         _camera = GetComponent<XRRig>().cameraGameObject;
     }
-    
-    
 
-    
+    private void Update()
+    {
+        CommonInput();
+    }
 
     private void CommonInput()
     {
@@ -34,6 +35,7 @@ public class OculusMove : MonoBehaviour
             character.Move(motion: newDirection * Time.deltaTime * 5f);
         }
     }
+    /*
     public Animation anim;
 
     private bool isWalking;
@@ -62,9 +64,6 @@ public class OculusMove : MonoBehaviour
             }
         }
     }
-    private void Update()
-    {
-        CameraAnimation();
-        CheckPosition();
-    }
+    */
+
 }
