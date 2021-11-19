@@ -7,18 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Panel;
-
-
     public void OpenPanel()
     {
         if(Panel !=null)
         {
-            bool isActive = Panel.activeSelf;
-            Panel.SetActive(!isActive);
+            Panel.SetActive(true);
         }
     }
-
-
     // public void OnClickoptionbtn()
     // {
     //     Debug.Log("옵션");
