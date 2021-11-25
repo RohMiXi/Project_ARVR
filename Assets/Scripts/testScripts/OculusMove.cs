@@ -10,6 +10,9 @@ public class OculusMove : MonoBehaviour
     public XRController controller = null;
     private CharacterController character;
     private GameObject _camera;
+    public float gravity = -20;
+    float yVelocity = 0;
+    
 
     
     private void Awake()
@@ -34,6 +37,19 @@ public class OculusMove : MonoBehaviour
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
             character.Move(motion: newDirection * Time.deltaTime * 5f);
         }
+        //keyboard
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        Vector3 dir = new Vector3(h, 0, v);
+        dir = Camera.main.transform.TransformDirection(dir);
+        yVelocity += gravity * Time.deltaTime;
+        if (character.isGrounded)
+        {
+            yVelocity = 0;
+        }
+        dir.y = yVelocity;
+        
+        character.Move(dir * Time.deltaTime * 10f);
     }
     /*
     public Animation anim;
