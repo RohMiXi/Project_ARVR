@@ -6,23 +6,15 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Panel;
-    public void OpenPanel()
+    public GameObject[] _myPanel;
+    public GameObject Information;
+    public void OpenPanel(int num)
     {
-        if(Panel !=null)
+        //_myPanel = GameObject.FindGameObjectWithTag("Information");
+        if(_myPanel != null)
         {
-            Panel.SetActive(true);
+            _myPanel[num].SetActive(true);
         }
     }
-    // public void OnClickoptionbtn()
-    // {
-    //     Debug.Log("옵션");
-    // }
-
-    // public void OnClickbackbtn()
-    // {
-    //     Debug.Log("불러오기");
-    // }
-
 }
  
