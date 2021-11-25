@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
+<<<<<<< Updated upstream
       value: 2242470311464677080f021607265a1e5932002b21382a353e663c21e1e83d2ee7e379c6eb3e18091027f73d092e0d3ae1293a45e305031f08
       flags: 0
     RecentlyUsedScenePath-1:
@@ -25,11 +26,33 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-6:
       value: 224247031146466e1f0c0d2c3e2a581802241333630c233d22662821e0e13a16ebe03efdd431267c1d07e2334a2b0f36e613
+=======
+      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badd333faf333313b032eea3b053d181aea1e471ef8021e12
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badc033e7e2283e301c03fc350a393526e20f1a45e305031f08
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e663c21e1e83d2ee7e379dde2292b353705dd350337053dfd0e1028c5451f05181ae4
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e663c21e1e83d2ee7e379c6eb3e18091027f73d092e0d3ae1293a45e305031f08
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badd737fdef092f30300cea190a3a0d3ae119471ef8021e12
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badcb39eee81936323c0fee280d3d4f2afc031d12
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badc139e5eb3528353705a1290a371526
+>>>>>>> Stashed changes
       flags: 0
     RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
     RecentlyUsedScenePath-8:
+<<<<<<< Updated upstream
       value: 224247031146467a01023f2909054d1513583b25202c661e242e1527adc33b34e6a718e0e0322b722c0ce6281d
       flags: 0
     RecentlyUsedScenePath-9:
@@ -43,6 +66,12 @@ EditorUserSettings:
       flags: 0
     UnityEditor.ShaderGraph.InspectorWindow:
       value: 18135939215a0a5004000b0e15254b524c1119263f2d6a722016393ce1eb3d36e5d339f9a5602b2e2c07a37e0901373ae01e0008f707250d171df81a53a5405d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd88908fecb0f9cfddf1eff4e7a1b1eae482f0fdace9e1959e9d9892e09395949091e285879ffcca90898b81d0988bd7888b88dff2ddf5c0f4f5c1f6b98b
+=======
+      value: 22424703114646680e0b0227036c7a1e121e162d131b2535232c5326ece92021
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c721f00122c2509262239232e5326ece92021
+>>>>>>> Stashed changes
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
