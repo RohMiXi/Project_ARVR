@@ -612,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1241652631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5784,7 +5784,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10847,6 +10847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7142228367843883581}
   gravity: -20
+  speed: 5
 --- !u!114 &7142228367952527731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11042,6 +11043,7 @@ GameObject:
   - component: {fileID: 7142228368579869920}
   - component: {fileID: 7142228368579869917}
   - component: {fileID: 7142228368579869916}
+  - component: {fileID: 7142228368579869927}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11049,6 +11051,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7142228368579869927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142228368579869926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c11b627cf9e2ccb4ba538f3512dc1aad, type: 2}
 --- !u!120 &7142228369535705548
 LineRenderer:
   m_ObjectHideFlags: 0
