@@ -12,6 +12,7 @@ public class OculusMove : MonoBehaviour
     private GameObject _camera;
     public float gravity = -20;
     float yVelocity = 0;
+    public float speed= 5.0f;
     
 
     
@@ -49,7 +50,7 @@ public class OculusMove : MonoBehaviour
         }
         dir.y = yVelocity;
         
-        character.Move(dir * Time.deltaTime * 10f);
+        character.Move(dir * Time.deltaTime * speed);
     }
     /*
     public Animation anim;
