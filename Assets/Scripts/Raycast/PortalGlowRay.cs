@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PortalGlowRay : MonoBehaviour
 {
-    RaycastHit hit;
     public GameObject Player;
     public GameObject Portal;
     private float Dist;
@@ -21,16 +20,6 @@ public class PortalGlowRay : MonoBehaviour
     void Update()
     {
         Dist = Vector3.Distance(Player.transform.position, Portal.transform.position);
-        if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, 1000))
-        {
-            if(hit.collider.name == "XR Rig")
-            {
-                Debug.Log(hit.collider.name);
-               
-            }
-            Debug.DrawRay(gameObject.transform.position, gameObject.transform.forward * hit.distance, Color.red);
-        }
-        Debug.Log(Dist);
         GlowPortal();
     }
 
