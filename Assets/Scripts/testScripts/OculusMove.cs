@@ -13,9 +13,10 @@ public class OculusMove : MonoBehaviour
     public float gravity = -20;
     float yVelocity = 0;
     public float speed= 5.0f;
-    
+    float maxspeed = 15.0f;
 
-    
+
+
     private void Awake()
     {
         character = GetComponent<CharacterController>();
@@ -25,6 +26,10 @@ public class OculusMove : MonoBehaviour
     private void Update()
     {
         CommonInput();
+        //if (speed < maxspeed)
+        //{
+         //   speed += 0.02f;
+        //}
     }
 
     private void CommonInput()
