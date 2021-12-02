@@ -6144,6 +6144,7 @@ GameObject:
   - component: {fileID: 1663842833}
   - component: {fileID: 1663842832}
   - component: {fileID: 1663842837}
+  - component: {fileID: 1663842838}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6158,7 +6159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663842831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 232a821e11521bb40b96dab762b05088, type: 3}
   m_Name: 
@@ -6235,7 +6236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663842831}
   m_LocalRotation: {x: -0.049069878, y: -0.0019802519, z: -0.00009728985, w: 0.9987934}
-  m_LocalPosition: {x: -0.57, y: 0.63, z: 0.55}
+  m_LocalPosition: {x: -1.5, y: -62.1, z: 236.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644791509}
@@ -6262,6 +6263,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1663842838
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663842831}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 39a21befc63245048b8ad34049bdbc60, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1742006676
 GameObject:
   m_ObjectHideFlags: 0
@@ -16052,7 +16068,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965728081}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6615066a5ac9c6489055e7d92329874, type: 3}
   m_Name: 
