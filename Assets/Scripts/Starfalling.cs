@@ -7,10 +7,10 @@ public class Starfalling : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float _posA;
-    public float _posB;
+    public Vector3 _posA;
+    public Vector3 _posB;
     void FixedUpdate() {
-        transform.position = new Vector3(Mathf.Lerp(_posA, _posB, Time.time),0, 0);
+        transform.position = Vector3.Lerp(transform.position, _posB, Time.deltaTime);
     }
 
     // Update is called once per frame
