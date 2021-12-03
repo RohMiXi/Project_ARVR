@@ -14,6 +14,11 @@ public class playerInformation : MonoBehaviour
         string path = Path.Combine(Application.dataPath, "PlayerData.json");
         File.WriteAllText(path, jsonData);
     }
+    [ContextMenu("From Json Data")]
+    void LoadPlayerDataToJson()
+    {
+        string path = Path.Combine(Application.dataPath, "playerData.json");
+    }
 
 }
 [System.Serializable]
