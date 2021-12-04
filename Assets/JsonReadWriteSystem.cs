@@ -16,8 +16,11 @@ public class JsonReadWriteSystem : MonoBehaviour
        
 
         string json = JsonUtility.ToJson(data, true);
+        
         Debug.Log(Application.dataPath+"/PlayerDataFile.json");
+        
         File.WriteAllText(Application.dataPath+"/PlayerDataFile.json", json);
+
     }
 
     public void LoadFromJson()
