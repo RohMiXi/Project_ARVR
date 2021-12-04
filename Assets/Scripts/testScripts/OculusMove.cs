@@ -12,7 +12,7 @@ public class OculusMove : MonoBehaviour
     private GameObject _camera;
     public float gravity = -20;
     float yVelocity = 0;
-    public float speed= 0.0f;
+    public float speed= 5.0f;
     float maxspeed = 5.0f;
    
     
@@ -28,8 +28,7 @@ public class OculusMove : MonoBehaviour
         Rigidbody body = hit.collider.attachedRigidbody;
         if (body == null || body.isKinematic)
         {
-            return;
-            
+            return;           
         }
 
         else
@@ -86,7 +85,34 @@ public class OculusMove : MonoBehaviour
             var inputDirection = transform.TransformDirection(inputVector);
             var lookDirection = new Vector3(x: 0, _camera.transform.eulerAngles.y, z: 0);
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
-            character.Move(motion: newDirection * Time.deltaTime * 5f);
+            if (_XRD.inthefire == true)
+            {
+                
+                character.Move(motion: newDirection * Time.deltaTime * -speed);
+                back = true;
+            }
+            else
+            {
+                if (back == true)
+                {
+                    character.Move(motion: newDirection * Time.deltaTime * -speed);
+                    
+                    count -= Time.deltaTime;
+                    if (count < 0)
+                    {
+
+                        back = false;
+                        count = 2f;
+                    }
+                }
+                else
+                {
+                    character.Move(motion: newDirection * Time.deltaTime * speed);
+                    
+                }
+
+            }
+            character.Move(motion: newDirection * Time.deltaTime * speed);
         }
         //keyboard
         float h = Input.GetAxis("Horizontal");
@@ -102,8 +128,9 @@ public class OculusMove : MonoBehaviour
 
         if (_XRD.inthefire == true)
         {
-           // count -= Time.deltaTime;
+             
             character.Move(dir * Time.deltaTime * -speed);
+            //character.Move(motion: newDirection * Time.deltaTime * speed);
             back = true;
         }
         else
