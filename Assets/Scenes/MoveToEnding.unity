@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 31620667}
   - component: {fileID: 31620669}
   m_Layer: 5
-  m_Name: player_Board
+  m_Name: "\uC785\uB825\uC560\uB2C8\uBA54\uC774\uC158"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 22.6}
   m_SizeDelta: {x: -752.33, y: -251.2816}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31620667
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 469932279}
   - component: {fileID: 469932278}
   m_Layer: 5
-  m_Name: submit_btn
+  m_Name: "\uC81C\uCD9C\uBC84\uD2BC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1968,7 +1968,7 @@ GameObject:
   - component: {fileID: 1059849745}
   - component: {fileID: 1059849744}
   m_Layer: 5
-  m_Name: NameInput
+  m_Name: "\uC774\uB984\uC785\uB825"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1992,7 +1992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -21.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059849744
@@ -2111,7 +2111,7 @@ GameObject:
   - component: {fileID: 1086857880}
   - component: {fileID: 1086857882}
   m_Layer: 5
-  m_Name: Setting_panel
+  m_Name: "\uC0AC\uC6A9\uC790\uC774\uB984\uC785\uB825\uCC3D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2472,12 +2472,12 @@ GameObject:
   - component: {fileID: 1282922210}
   - component: {fileID: 1282922209}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "UI \uAC10\uC0AC\uBA54\uC2DC\uC9C0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1282922208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2554,12 +2554,12 @@ GameObject:
   - component: {fileID: 1312779847}
   - component: {fileID: 1312779850}
   m_Layer: 5
-  m_Name: OpenPanel
+  m_Name: "\uC138\uD305\uD328\uB110\uC5F4\uAE30\uBC84\uD2BC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1312779846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 1321129757}
   - component: {fileID: 1321129762}
   m_Layer: 5
-  m_Name: GameScene
+  m_Name: "\uC804\uCCB4\uD328\uB110"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4362,7 +4362,7 @@ GameObject:
   - component: {fileID: 1765004681}
   - component: {fileID: 1765004680}
   m_Layer: 5
-  m_Name: information_text
+  m_Name: "\uC804\uB2F9\uAE30\uB85D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4400,7 +4400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.7529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4720,7 +4720,7 @@ GameObject:
   - component: {fileID: 2105005343}
   - component: {fileID: 2105005342}
   m_Layer: 5
-  m_Name: Load_btn
+  m_Name: "\uBD88\uB7EC\uC624\uAE30"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
