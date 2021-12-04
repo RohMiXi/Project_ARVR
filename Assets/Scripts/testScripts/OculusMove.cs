@@ -14,7 +14,9 @@ public class OculusMove : MonoBehaviour
     float yVelocity = 0;
     public float speed= 5.0f;
     float maxspeed = 15.0f;
-
+    float pl_speed = 0;
+    float h_set = 0;
+    float v_set = 0;
 
 
     private void Awake()
@@ -26,9 +28,11 @@ public class OculusMove : MonoBehaviour
     private void Update()
     {
         CommonInput();
+        Debug.Log(pl_speed);
+     
         //if (speed < maxspeed)
         //{
-         //   speed += 0.02f;
+        //   speed += 0.02f;
         //}
     }
 
@@ -41,12 +45,84 @@ public class OculusMove : MonoBehaviour
             var inputDirection = transform.TransformDirection(inputVector);
             var lookDirection = new Vector3(x: 0, _camera.transform.eulerAngles.y, z: 0);
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
-            character.Move(motion: newDirection * Time.deltaTime * 5f);
+            character.Move(motion: newDirection * Time.deltaTime * speed);
         }
+
         //keyboard
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        Vector3 dir = new Vector3(h, 0, v);
+
+        if (h > 0)
+        {
+            h_set += Time.deltaTime;
+            if (h_set >= 1)
+            {
+                h_set = 1;
+            }
+        }
+        else if (h < 0)
+        {
+            h_set -= Time.deltaTime;
+            if (h_set <= -1)
+            {
+                h_set = -1;
+            }
+        }
+        else
+        {
+            if(h_set > 0)
+            {
+                h_set -= Time.deltaTime;
+
+            }
+            else if(h_set <0)
+            {
+                h_set += Time.deltaTime;
+            }
+            else
+            {
+                h_set = 0;
+            }
+        }
+
+        if (v > 0)
+        {
+            v_set += Time.deltaTime;
+            if (v_set >= 1)
+            {
+                v_set = 1;
+            }
+        }
+        else if (v < 0)
+        {
+            v_set -= Time.deltaTime;
+            if (v_set <= -1)
+            {
+                v_set = -1;
+            }
+        }
+        else
+        {
+            if (v_set > 0)
+            {
+                v_set -= Time.deltaTime;
+
+            }
+            else if (v_set < 0)
+            {
+                v_set += Time.deltaTime;
+            }
+            else
+            {
+                v_set = 0;
+            }
+        }
+
+
+
+
+
+        Vector3 dir = new Vector3(h_set, 0, v_set);
         dir = Camera.main.transform.TransformDirection(dir);
         yVelocity += gravity * Time.deltaTime;
         if (character.isGrounded)
@@ -54,8 +130,25 @@ public class OculusMove : MonoBehaviour
             yVelocity = 0;
         }
         dir.y = yVelocity;
+
+        if (h != 0f || v != 0f)
+        {
+            pl_speed += 2 * Time.deltaTime;
+            if (pl_speed >= speed)
+            {
+                pl_speed = speed;
+            }
+        }
+        else
+        {
+            pl_speed -= 5 * Time.deltaTime;
+            if (pl_speed <= 0)
+            {
+                pl_speed = 0;
+            }
+        }     
         
-        character.Move(dir * Time.deltaTime * speed);
+        character.Move(dir * Time.deltaTime * pl_speed);
     }
     /*
     public Animation anim;
