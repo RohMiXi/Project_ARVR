@@ -3585,7 +3585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 164.658, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -35.911, y: 23.27}
+  m_AnchoredPosition: {x: -35.651, y: 23.216}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018803871
@@ -10168,6 +10168,7 @@ GameObject:
   - component: {fileID: 1690392903}
   - component: {fileID: 1690392902}
   - component: {fileID: 1690392901}
+  - component: {fileID: 1690392905}
   m_Layer: 5
   m_Name: Game Start
   m_TagString: Untagged
@@ -10302,6 +10303,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690392899}
   m_CullTransparentMesh: 1
+--- !u!114 &1690392905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690392899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacc74be6eeba404e9640d347615e933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverStatus: 0
+  Button: {fileID: 17279784}
 --- !u!1 &1738907650
 GameObject:
   m_ObjectHideFlags: 0
@@ -18951,6 +18966,7 @@ MonoBehaviour:
   controller: {fileID: 7142228367843883581}
   gravity: -20
   speed: 5
+  _XRD: {fileID: 0}
 --- !u!114 &7142228367952527731
 MonoBehaviour:
   m_ObjectHideFlags: 0
