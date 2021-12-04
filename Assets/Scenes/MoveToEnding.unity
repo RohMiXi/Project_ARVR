@@ -419,7 +419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 487.1, y: 167.2}
+  m_AnchoredPosition: {x: 1180, y: 163}
   m_SizeDelta: {x: 974.2, y: 334.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51678319
@@ -495,7 +495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63adcb760791b545b4870c8ab96d275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameInputField: {fileID: 0}
+  NameInputField: {fileID: 1059849744}
+  Rest_people: {fileID: 1398894835}
+  With_people: {fileID: 1486823163}
   data:
     Name: []
 --- !u!1 &66749122
@@ -1805,7 +1807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -29}
+  m_AnchoredPosition: {x: 0, y: -36}
   m_SizeDelta: {x: -587.4816, y: -59.8119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &732070661
@@ -3274,6 +3276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameInputField: {fileID: 1059849744}
+  Rest_people: {fileID: 1398894835}
+  With_people: {fileID: 1486823163}
   data:
     Name: []
 --- !u!1 &1366381598
@@ -4297,8 +4301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -12.8}
-  m_SizeDelta: {x: 160, y: 98.252}
+  m_AnchoredPosition: {x: 0.89999, y: -0.0000076294}
+  m_SizeDelta: {x: 235.48, y: 200.3762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398894835
 MonoBehaviour:
@@ -4333,7 +4337,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NUILL
+  m_Text: "\uC790\uAE30 \uD3EC\uD568 \uCD5C\uADFC 10\uBA85\n"
 --- !u!222 &1398894836
 CanvasRenderer:
   m_ObjectHideFlags: 0
