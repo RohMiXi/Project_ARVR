@@ -10,15 +10,15 @@ public class Player_Controller : MonoBehaviour
     [ContextMenu("To Json Data")]
     void SavePlayerDataToJson()
     {
-        string jsonData = JsonUtility.ToJson(playerData);
+        string jsonData = JsonUtility.ToJson(playerData, true);
         string path = Path.Combine(Application.dataPath, "PlayerData.json");
         File.WriteAllText(path, jsonData);
     }
     [ContextMenu("From Json Data")]
-    void LoadPlayerDataToJson()
-    {
-        string path = Path.Combine(Application.dataPath, "playerData.json");
-    }
+    // void LoadPlayerDataToJson()
+    // {
+    //     string path = Path.Combine(Application.dataPath, "playerData.json");
+    // }
 
 }
 [System.Serializable]
