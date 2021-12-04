@@ -10,6 +10,7 @@ public class xrrigdamage : MonoBehaviour
     public float damageTime = 0.1f;
     Transform XRRig;
     public float attackRange = 10;
+    public bool inthefire;
 
     IEnumerator DamageEvent()
     {
@@ -34,7 +35,12 @@ public class xrrigdamage : MonoBehaviour
         {
             StopAllCoroutines();
             StartCoroutine(DamageEvent());
+            inthefire = true;
 
+        }
+        else
+        {
+            inthefire = false;
         }
     }
     private void OnCollisionEnter(Collision collision)
