@@ -685,15 +685,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 389753198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4975e7285e8550346abdac79b0d2f614, type: 3}
+  m_Script: {fileID: 11500000, guid: b5b7a3e59ed47df4199ec51d2c4203f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerData:
     name: "\uC870\uC900\uD615"
     age: 21
-    level: 1
+    level: 99
     isDeed: 0
-    items: []
+    items:
+    - "\uB098\uCE68\uBC18"
+    - "\uB178"
+    - "\uC720\uB4F1"
 --- !u!65 &389753200
 BoxCollider:
   m_ObjectHideFlags: 0
