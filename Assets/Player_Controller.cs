@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
+
 
 public class Player_Controller : MonoBehaviour
 {
     public PlayerData playerData;
 
+    
     [ContextMenu("To Json Data")]
     void SavePlayerDataToJson()
     {
@@ -19,6 +22,17 @@ public class Player_Controller : MonoBehaviour
     // {
     //     string path = Path.Combine(Application.dataPath, "playerData.json");
     // }
+    public GameObject Panel;
+    public void OpenPaenl()
+    {
+        if(Panel != null)
+        {
+            bool isActive = Panel.activeSelf;
+            Panel.SetActive(!isActive);
+        }
+    }
+
+
 
 [System.Serializable]
 public class PlayerData
