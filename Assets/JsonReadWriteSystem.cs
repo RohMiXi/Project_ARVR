@@ -44,8 +44,6 @@ public class JsonReadWriteSystem : MonoBehaviour
         With_people.text = "그 외" +result.ToString() + "명과 함께 하였습니다.";
     }
 
-
-
     public void LoadFromJson()
     {
         string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
