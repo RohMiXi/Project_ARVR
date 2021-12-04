@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.041044757, g: 0.07438848, b: 0.12560368, a: 1}
+  m_IndirectSpecularColor: {r: 0.04100457, g: 0.07439519, b: 0.12579662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3977,6 +3977,7 @@ GameObject:
   - component: {fileID: 1066104482}
   - component: {fileID: 1066104481}
   - component: {fileID: 1066104480}
+  - component: {fileID: 1066104485}
   m_Layer: 5
   m_Name: Popup Canvas
   m_TagString: Untagged
@@ -4085,6 +4086,20 @@ RectTransform:
   m_AnchoredPosition: {x: -35.911, y: 22.706}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1066104485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066104479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05543426ed7900744bb0220b724b68bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valuenum: 0
+  valuevalue: {fileID: 1066104479}
 --- !u!1 &1066370500
 GameObject:
   m_ObjectHideFlags: 0
@@ -16263,6 +16278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057002714}
   - component: {fileID: 2057002715}
+  - component: {fileID: 2057002716}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -16343,6 +16359,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2057002716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057002713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5023acdf2bf2a2c4ebebf37f97f6b5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sc: {fileID: 1066104485}
+  a: {fileID: 2057002715}
 --- !u!33 &102639486683443284
 MeshFilter:
   m_ObjectHideFlags: 0
