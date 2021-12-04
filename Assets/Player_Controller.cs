@@ -1,20 +1,21 @@
-// using System.Collections;
+/*
+ // using System.Collections;
 // using System.Collections.Generic;
 // using UnityEngine;
 // using System.IO;
 // using UnityEngine.UI;
 
 
-<<<<<<< Updated upstream
+//<<<<<< Updated upstream
 // public class Player_Controller : MonoBehaviour
 // {
 //     public InputField NameInput;
-=======
+//=======
 public class Player_Controller : MonoBehaviour
 {
-    /*
+
     public InputField NameInput;
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
 
 //     public void SaveToJson()
@@ -31,14 +32,14 @@ public class Player_Controller : MonoBehaviour
 //         string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
 //         Player_Controller data = JsonUtility.FromJson<Player_Controller>(Json);
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 //         NameInput.text = data.NameInput;   
 //     }
-=======
+//=======
         NameInput.text = data.NameInput;   
-    }*/
+    }
 }
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
 //     public PlayerData playerData;
 
 //     [ContextMenu("To Json Data")]
@@ -73,3 +74,4 @@ public class Player_Controller : MonoBehaviour
 //         public string[] items;
 //     }
 // }
+*/
