@@ -28,10 +28,9 @@ using UnityEngine.XR.Interaction.Toolkit;
         }
     }
 
-    public virtual bool isHoverActive
+    protected bool isUISelectActive
     {
-        get => hoverStatus;
-        set => hoverStatus = true;
+        get => hoverStatus; 
     }
 } 
 
