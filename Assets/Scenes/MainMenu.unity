@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04030303, g: 0.072878264, b: 0.12636468, a: 1}
+  m_IndirectSpecularColor: {r: 0.04100457, g: 0.07439519, b: 0.12579662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2401,7 +2401,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2775,13 +2775,14 @@ GameObject:
   - component: {fileID: 740730840}
   - component: {fileID: 740730842}
   - component: {fileID: 740730841}
+  - component: {fileID: 740730843}
   m_Layer: 5
   m_Name: Option Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740730840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2844,6 +2845,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740730839}
   m_CullTransparentMesh: 1
+--- !u!114 &740730843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740730839}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05543426ed7900744bb0220b724b68bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valuenum: 0
+  valuevalue: {fileID: 740730839}
 --- !u!1 &813848933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,6 +3787,7 @@ GameObject:
   - component: {fileID: 1066104482}
   - component: {fileID: 1066104481}
   - component: {fileID: 1066104480}
+  - component: {fileID: 1066104485}
   m_Layer: 5
   m_Name: Popup Canvas
   m_TagString: Untagged
@@ -3880,6 +3896,20 @@ RectTransform:
   m_AnchoredPosition: {x: -35.911, y: 22.706}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1066104485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066104479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05543426ed7900744bb0220b724b68bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valuenum: 0
+  valuevalue: {fileID: 1066104479}
 --- !u!1 &1066370500
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,8 +9899,8 @@ RectTransform:
   m_Father: {fileID: 1915564277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15910,6 +15940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057002714}
   - component: {fileID: 2057002715}
+  - component: {fileID: 2057002716}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -15986,10 +16017,24 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 70
+  m_Value: 31
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2057002716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057002713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5023acdf2bf2a2c4ebebf37f97f6b5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sc: {fileID: 1066104485}
+  a: {fileID: 2057002715}
 --- !u!33 &102639486683443284
 MeshFilter:
   m_ObjectHideFlags: 0
