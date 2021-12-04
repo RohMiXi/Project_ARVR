@@ -5,9 +5,16 @@
 // using UnityEngine.UI;
 
 
+<<<<<<< Updated upstream
 // public class Player_Controller : MonoBehaviour
 // {
 //     public InputField NameInput;
+=======
+public class Player_Controller : MonoBehaviour
+{
+    /*
+    public InputField NameInput;
+>>>>>>> Stashed changes
 
 
 //     public void SaveToJson()
@@ -24,8 +31,14 @@
 //         string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
 //         Player_Controller data = JsonUtility.FromJson<Player_Controller>(Json);
 
+<<<<<<< Updated upstream
 //         NameInput.text = data.NameInput;   
 //     }
+=======
+        NameInput.text = data.NameInput;   
+    }*/
+}
+>>>>>>> Stashed changes
 //     public PlayerData playerData;
 
 //     [ContextMenu("To Json Data")]

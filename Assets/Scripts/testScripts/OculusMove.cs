@@ -18,6 +18,9 @@ public class OculusMove : MonoBehaviour
     float h_set = 0;
     float v_set = 0;
 
+    float x_set = 0;
+    float y_set = 0;
+
 
     private void Awake()
     {
@@ -34,6 +37,7 @@ public class OculusMove : MonoBehaviour
         //{
         //   speed += 0.02f;
         //}
+
     }
 
     private void CommonInput()
@@ -41,14 +45,101 @@ public class OculusMove : MonoBehaviour
         // Touchpad/Joystick position
         if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 position))
         {
+            if (position.x > 0)
+        {
+            x_set += Time.deltaTime;
+            if (x_set >= 1)
+            {
+                x_set = 1;
+            }
+        }
+        else if (position.x < 0)
+        {
+            x_set -= Time.deltaTime;
+            if (x_set <= -1)
+            {
+                x_set = -1;
+            }
+        }
+        else
+        {
+            if(x_set > 0)
+            {
+               x_set -= Time.deltaTime;
+
+            }
+            else if(x_set <0)
+            {
+                x_set +=  Time.deltaTime;
+            }
+            else
+            {
+                x_set = 0;
+            }
+        }
+
+        if (position.y > 0)
+        {
+            y_set += Time.deltaTime;
+            if (y_set >= 1)
+            {
+                y_set = 1;
+            }
+        }
+        else if (position.y < 0)
+        {
+            y_set -= Time.deltaTime;
+            if (y_set <= -1)
+            {
+                y_set = -1;
+            }
+        }
+        else
+        {
+            if (y_set > 0)
+            {
+                y_set -= Time.deltaTime;
+
+            }
+            else if (y_set < 0)
+            {
+                y_set += Time.deltaTime;
+            }
+            else
+            {
+                y_set = 0;
+            }
+        }
+
             var inputVector = new Vector3(-position.x, Physics.gravity.y, z: -position.y);
+            Debug.LogFormat("-position.x = {0} -position.y = {1}", -x_set,  -y_set);
             var inputDirection = transform.TransformDirection(inputVector);
             var lookDirection = new Vector3(x: 0, _camera.transform.eulerAngles.y, z: 0);
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
-            character.Move(motion: newDirection * Time.deltaTime * speed);
+
+             if (position.y != 0f || position.x != 0f)
+        {
+            pl_speed += 2 * Time.deltaTime;
+            if (pl_speed >= speed)
+            {
+                pl_speed = speed;
+            }
         }
+        else
+        {
+            pl_speed -= 5 * Time.deltaTime;
+            if (pl_speed <= 0)
+            {
+                pl_speed = 0;
+            }
+        }     
+
+            character.Move(motion: newDirection * Time.deltaTime * pl_speed);
+        }
+    }
 
         //keyboard
+        /*
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -150,6 +241,8 @@ public class OculusMove : MonoBehaviour
         
         character.Move(dir * Time.deltaTime * pl_speed);
     }
+    */
+
     /*
     public Animation anim;
 
