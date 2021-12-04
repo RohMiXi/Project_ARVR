@@ -21,12 +21,13 @@ public class Player_Controller : MonoBehaviour
     // }
 
 
-[System.Serializable]
-public class PlayerData
-{
-    public string name;
-    public int age;
-    public int level;
-    public bool isDeed;
-    public string[] items;
+    [System.Serializable]
+    public class PlayerData
+    {
+        public string name;
+        public int age;
+        public int level;
+        public bool isDeed;
+        public string[] items;
+    }
 }
