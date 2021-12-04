@@ -20,7 +20,6 @@ public class Player_Controller : MonoBehaviour
     //     string path = Path.Combine(Application.dataPath, "playerData.json");
     // }
 
-
 [System.Serializable]
 public class PlayerData
 {
@@ -29,4 +28,5 @@ public class PlayerData
     public int level;
     public bool isDeed;
     public string[] items;
+}
 }

@@ -689,9 +689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData:
-    name: "\uC870\uC900\uD615"
-    age: 21
-    level: 99
+    name: "\uB178\uC7AC\uC5F4"
+    age: 23
+    level: 90
     isDeed: 0
     items:
     - "\uB098\uCE68\uBC18"
