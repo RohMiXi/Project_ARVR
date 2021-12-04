@@ -14,13 +14,13 @@ public class Player_Controller : MonoBehaviour
         string path = Path.Combine(Application.dataPath, "PlayerData.json");
         File.WriteAllText(path, jsonData);
     }
-    [ContextMenu("From Json Data")]
+    // [ContextMenu("From Json Data")]
     // void LoadPlayerDataToJson()
     // {
     //     string path = Path.Combine(Application.dataPath, "playerData.json");
     // }
 
-}
+
 [System.Serializable]
 public class PlayerData
 {
