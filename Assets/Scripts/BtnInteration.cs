@@ -12,5 +12,9 @@ public class BtnInteration : MonoBehaviour
     }
     public void SceneChange(){
         SceneManager.LoadScene("MoveToEnding");
+
+    }
+    public void SceneChanges(){
+        SceneManager.LoadScene("MainMenu");
     }
 }
