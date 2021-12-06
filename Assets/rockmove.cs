@@ -20,8 +20,10 @@ public class rockmove : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, XRRig.position) < attackRange)
         {
+            //FindObjectOfType<Audio_Manager>().Play("rockappear");
             transform.position = Vector3.MoveTowards(transform.position,
                 new Vector3(-26f, -32f, -124f), Time.deltaTime * speed);
+            
 
         }
     }
