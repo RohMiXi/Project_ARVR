@@ -35,6 +35,7 @@ public class xrrigdamage : MonoBehaviour
         {
             StopAllCoroutines();
             StartCoroutine(DamageEvent());
+            FindObjectOfType<Audio_Manager>().Play("dinosaur_attacked");
             inthefire = true;
 
         }
