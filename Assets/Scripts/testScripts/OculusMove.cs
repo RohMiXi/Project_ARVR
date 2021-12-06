@@ -14,16 +14,13 @@ public class OculusMove : MonoBehaviour
     float yVelocity = 0;
     public float speed= 5.0f;
     float maxspeed = 5.0f;
-    private AudioSource swim;
-   
-    
-    
-    
-    
+    public AudioSource swim;   
     public xrrigdamage _XRD;
     private float count = 2f;
     private bool back;
     private bool swimming;
+    //xrring의 이전 포지션;
+    Vector3 latePosition;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -59,20 +56,43 @@ public class OculusMove : MonoBehaviour
         character = GetComponent<CharacterController>();
         _camera = GetComponent<XRRig>().cameraGameObject;
         
-        
+
+
+
     }
 
     private void Update()
     {
         CommonInput();
+        if (latePosition != transform.position)
+        {
+            Debug.Log("작동");
+            swimming = true;
+            //if (swimming == true)
+            //{
+            //   swim.Play();
+            //}
+            if (swim.isPlaying == false)
+            {
+                swim.Play();
+            }
+
+        }
+        
+
+        //제일 마지막에 업데이트해줘야함
+        latePosition = transform.position;
+        
+
+
 
         //if (Input.GetKey("w"))
         //{
-         //   if(speed < maxspeed)
-           // {
-           //     speed += 0.025f;
-           // }
-            
+        //   if(speed < maxspeed)
+        // {
+        //     speed += 0.025f;
+        // }
+
         //}
     }
     
@@ -160,7 +180,9 @@ public class OculusMove : MonoBehaviour
                 
             }
             
+            
         }
+        
         //if (character.Move = true)
        // {
 
