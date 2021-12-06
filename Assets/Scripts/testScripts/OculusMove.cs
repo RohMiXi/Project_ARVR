@@ -161,10 +161,10 @@ public class OculusMove : MonoBehaviour
             }
             
         }
-        if (character.Move = true)
-        {
+        //if (character.Move = true)
+       // {
 
-        }
+        //}
         
         
     }
