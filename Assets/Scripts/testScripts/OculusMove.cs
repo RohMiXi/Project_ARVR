@@ -14,6 +14,7 @@ public class OculusMove : MonoBehaviour
     float yVelocity = 0;
     public float speed= 5.0f;
     float maxspeed = 5.0f;
+    private AudioSource swim;
    
     
     
@@ -22,6 +23,7 @@ public class OculusMove : MonoBehaviour
     public xrrigdamage _XRD;
     private float count = 2f;
     private bool back;
+    private bool swimming;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -155,8 +157,13 @@ public class OculusMove : MonoBehaviour
             {
                 
                 character.Move(dir * Time.deltaTime * speed);
+                
             }
             
+        }
+        if (character.Move = true)
+        {
+
         }
         
         
