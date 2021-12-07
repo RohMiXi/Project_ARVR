@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 112553719}
   - component: {fileID: 112553718}
   - component: {fileID: 112553721}
+  - component: {fileID: 112553722}
   m_Layer: 4
   m_Name: WaterBlock_50m
   m_TagString: Untagged
@@ -361,7 +362,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 032d9e27be98457499c34fecd71216dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3cf9ff21047f7124d8a0efbfe19d7a60, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -447,6 +448,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &112553722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112553716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd753508064f034381b5083ab2c5a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sibal: {fileID: 112553721}
 --- !u!1 &165929559
 GameObject:
   m_ObjectHideFlags: 0
