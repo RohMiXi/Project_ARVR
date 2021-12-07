@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04030303, g: 0.072878264, b: 0.12636468, a: 1}
+  m_IndirectSpecularColor: {r: 0.04100457, g: 0.07439519, b: 0.12579662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19531,6 +19531,7 @@ GameObject:
   - component: {fileID: 7142228367952527728}
   - component: {fileID: 7142228367952527729}
   - component: {fileID: 7142228367952527736}
+  - component: {fileID: 7142228367952527737}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -19634,6 +19635,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7142228367952527737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142228367952527735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917838f16ef07e54385fdf472de90bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: {fileID: 2057002715}
+  mainmenubgm: {fileID: 7142228367952527736}
 --- !u!114 &7142228368579869916
 MonoBehaviour:
   m_ObjectHideFlags: 0
