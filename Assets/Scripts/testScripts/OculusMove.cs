@@ -78,6 +78,13 @@ public class OculusMove : MonoBehaviour
             }
 
         }
+        else
+        {
+            if(swim.isPlaying == true)
+            {
+                swim.Stop();
+            }
+        }
         
 
         //제일 마지막에 업데이트해줘야함
