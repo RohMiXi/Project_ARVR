@@ -17,6 +17,10 @@ public class OculusMove : MonoBehaviour
     public AudioSource swim;   
     public xrrigdamage _XRD;
     public damagexrrig1 _DXG;
+    public rockdamage _RDG;
+    public rockdamage1 _RDG1;
+    public rockdamage2 _RDG2;
+
     public speedfast _SFT;
     private float count = 2f;
     private bool back;
@@ -172,6 +176,28 @@ public class OculusMove : MonoBehaviour
             //character.Move(motion: newDirection * Time.deltaTime * speed);
             back = true;
         }
+        if (_RDG.inthefire == true)
+        {
+
+            character.Move(dir * Time.deltaTime * -speed);
+            
+            back = true;
+        }
+        if (_RDG1.inthefire == true)
+        {
+
+            character.Move(dir * Time.deltaTime * -speed);
+
+            back = true;
+        }
+        if (_RDG2.inthefire == true)
+        {
+
+            character.Move(dir * Time.deltaTime * -speed);
+
+            back = true;
+        }
+
         else
         {
             if (back == true)
