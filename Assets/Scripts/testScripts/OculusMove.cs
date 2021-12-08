@@ -16,6 +16,7 @@ public class OculusMove : MonoBehaviour
     float maxspeed = 5.0f;
     public AudioSource swim;   
     public xrrigdamage _XRD;
+    public damagexrrig1 _DXG;
     private float count = 2f;
     private bool back;
     private bool swimming;
@@ -158,6 +159,13 @@ public class OculusMove : MonoBehaviour
         if (_XRD.inthefire == true)
         {
              
+            character.Move(dir * Time.deltaTime * -speed);
+            //character.Move(motion: newDirection * Time.deltaTime * speed);
+            back = true;
+        }
+        if (_DXG.inthefire == true)
+        {
+
             character.Move(dir * Time.deltaTime * -speed);
             //character.Move(motion: newDirection * Time.deltaTime * speed);
             back = true;
