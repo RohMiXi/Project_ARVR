@@ -17,8 +17,10 @@ public class OculusMove : MonoBehaviour
     public AudioSource swim;   
     public xrrigdamage _XRD;
     public damagexrrig1 _DXG;
+    public speedfast _SFT;
     private float count = 2f;
     private bool back;
+    //private bool fastfast;
     private bool swimming;
     //xrring의 이전 포지션;
     Vector3 latePosition;
@@ -190,20 +192,36 @@ public class OculusMove : MonoBehaviour
             }
             else
             {
-                
-                character.Move(dir * Time.deltaTime * speed);
-                
+                if (_SFT.fastrange == true)
+                {
+
+                    character.Move(dir * Time.deltaTime * speed * 2);
+
+                }
+                else
+                {
+                    character.Move(dir * Time.deltaTime * speed);
+                }
+                //character.Move(dir * Time.deltaTime * speed);
+
             }
             
             
         }
-        
-        //if (character.Move = true)
-       // {
+        /*if (_SFT.fastrange == true)
+        {
 
-        //}
+            character.Move(dir * Time.deltaTime * speed * 2);
+            
+        }
+        else
+        {
+            character.Move(dir * Time.deltaTime * speed);
+        }*/
+
         
-        
+
+
     }
     /*
     public Animation anim;
