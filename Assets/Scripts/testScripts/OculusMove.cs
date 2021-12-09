@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class OculusMove : MonoBehaviour
 {
     public XRController controller = null;
+    public XRController rightcontroller;
     private CharacterController character;
     private GameObject _camera;
     public float gravity = -20;
@@ -157,10 +158,17 @@ public class OculusMove : MonoBehaviour
             }
             character.Move(motion: newDirection * Time.deltaTime * speed);
         }
-        float H = Input.GetAxis("3rd axis");
+        if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
+        {
+            var Vector = new Vector3(-pos.x, Physics.gravity.y, z: -pos.y);
+            var Direction = transform.TransformDirection(Vector);
+            transform.Rotate(direction * Time.deltaTime);
+        }
+
+        /*float H = Input.GetAxis("3rd axis");
         float V = Input.GetAxis("4th axis");
         Vector3 direction = new Vector3(H, 0, V);
-        transform.Rotate(direction * Time.deltaTime);
+        transform.Rotate(direction * Time.deltaTime);*/
         //keyboard
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
