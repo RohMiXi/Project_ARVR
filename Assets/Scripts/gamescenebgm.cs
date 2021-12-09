@@ -10,7 +10,7 @@ public class gamescenebgm : MonoBehaviour
     void Start()
     {
         PopupCanvas = GameObject.Find("Popup Canvas");
-        sibal.volume = (float)PopupCanvas.GetComponent<scenechange>().valuenum / 200;
+        sibal.volume = (float)PopupCanvas.GetComponent<scenechange>().valuenum / 600;
 
     }
 

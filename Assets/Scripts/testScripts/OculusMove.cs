@@ -28,6 +28,7 @@ public class OculusMove : MonoBehaviour
     private bool swimming;
     //xrring의 이전 포지션;
     Vector3 latePosition;
+    Vector3 direction;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -70,6 +71,7 @@ public class OculusMove : MonoBehaviour
 
     private void Update()
     {
+        direction = Camera.main.transform.TransformDirection(direction);
         CommonInput();
         if (latePosition != transform.position)
         {
@@ -84,12 +86,17 @@ public class OculusMove : MonoBehaviour
                 swim.Play();
             }
 
+
         }
         else
         {
             if(swim.isPlaying == true)
             {
                 swim.Stop();
+            }
+            if(_SFT.fastrange == true)
+            {
+                character.Move(direction * Time.deltaTime * speed * 2);
             }
         }
         
