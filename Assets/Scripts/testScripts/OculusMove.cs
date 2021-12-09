@@ -157,6 +157,10 @@ public class OculusMove : MonoBehaviour
             }
             character.Move(motion: newDirection * Time.deltaTime * speed);
         }
+        float H = Input.GetAxis("3rd axis");
+        float V = Input.GetAxis("4th axis");
+        Vector3 direction = new Vector3(H, 0, V);
+        transform.Rotate(direction * Time.deltaTime);
         //keyboard
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
