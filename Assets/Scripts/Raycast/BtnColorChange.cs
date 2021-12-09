@@ -101,7 +101,72 @@ public class BtnColorChange : MonoBehaviour
             btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
             btnMat5.material.SetColor("_EmissionColor", color * -1f);
         }
-    }
+
+            if (RightlineRenderable.TryGetCurrent3DRaycastHit(out RayHit))
+            {
+                Debug.Log(RayHit.collider.gameObject.name);
+
+                if (RayHit.collider.gameObject.name == "StartBox")
+                {
+                    //hoverStatusStart = true;
+                    btnMat1.material.SetColor("_EmissionColor", color * 0.01f);
+                    btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
+                    btnMat5.material.SetColor("_EmissionColor", color * -1f);
+                }
+                else if (RayHit.collider.gameObject.name == "GuideBox")
+                {
+                    //hoverStatusStart = true;
+                    btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat2.material.SetColor("_EmissionColor", color * 0.01f);
+                    btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
+                    btnMat5.material.SetColor("_EmissionColor", color * -1f);
+                }
+                else if (RayHit.collider.gameObject.name == "OptionBox")
+                {
+                    //hoverStatusStart = true;
+                    btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat3.material.SetColor("_EmissionColor", color * 0.01f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
+                    btnMat5.material.SetColor("_EmissionColor", color * -1f);
+                }
+                else if (RayHit.collider.gameObject.name == "ExitBox")
+                {
+                    btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.001f);
+                    btnMat5.material.SetColor("_EmissionColor", color * -1f);
+                }
+                else if (RayHit.collider.gameObject.name == "BackBox")
+                {
+                    btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.001f);
+                    btnMat5.material.SetColor("_EmissionColor", color * 0.01f);
+                }
+                else
+                {
+                    btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                    btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
+                    btnMat5.material.SetColor("_EmissionColor", color * -1f);
+                }
+            }
+            else
+            {
+                btnMat1.material.SetColor("_EmissionColor", color * -1f);
+                btnMat2.material.SetColor("_EmissionColor", color * -1f);
+                btnMat3.material.SetColor("_EmissionColor", color * -1f);
+                btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
+                btnMat5.material.SetColor("_EmissionColor", color * -1f);
+            }
+        }
 } 
 }
 
