@@ -19484,6 +19484,11 @@ MonoBehaviour:
   speed: 5
   swim: {fileID: 0}
   _XRD: {fileID: 0}
+  _DXG: {fileID: 0}
+  _RDG: {fileID: 0}
+  _RDG1: {fileID: 0}
+  _RDG2: {fileID: 0}
+  _SFT: {fileID: 0}
 --- !u!114 &7142228367952527731
 MonoBehaviour:
   m_ObjectHideFlags: 0
