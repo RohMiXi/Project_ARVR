@@ -19480,6 +19480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7142228367843883581}
+  rightcontroller: {fileID: 0}
   gravity: -20
   speed: 5
   swim: {fileID: 0}
@@ -19515,14 +19516,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7142228367952527735}
-  m_LocalRotation: {x: -0, y: -0.99443424, z: -0, w: -0.10535937}
-  m_LocalPosition: {x: -36.12, y: 22.62, z: 90.29}
+  m_LocalRotation: {x: -0, y: -0.9969898, z: -0, w: -0.0775331}
+  m_LocalPosition: {x: -36.36, y: 22.62, z: 90.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7142228369733629399}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 167.904, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 171.106, z: 0}
 --- !u!1 &7142228367952527735
 GameObject:
   m_ObjectHideFlags: 0
