@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Target
   - Information
+  - SoundHandler
+  - playerOutput
   layers:
   - Default
   - TransparentFX
