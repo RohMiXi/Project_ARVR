@@ -151,8 +151,17 @@ public class OculusMove : MonoBehaviour
                 }
                 else
                 {
-                    character.Move(motion: newDirection * Time.deltaTime * speed);
-                    
+                    if (_SFT.fastrange == true)
+                    {
+
+                        character.Move(motion: newDirection * Time.deltaTime * speed * 2);
+
+                    }
+                    else
+                    {
+                        character.Move(motion: newDirection * Time.deltaTime * speed);
+                    }
+
                 }
 
             }
@@ -160,9 +169,9 @@ public class OculusMove : MonoBehaviour
         }
         if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
-            var Vector = new Vector3(-pos.x, Physics.gravity.y, z: -pos.y);
-            var Direction = transform.TransformDirection(Vector);
-            transform.Rotate(direction * Time.deltaTime);
+
+            float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, angle, 0);
         }
 
         /*float H = Input.GetAxis("3rd axis");
