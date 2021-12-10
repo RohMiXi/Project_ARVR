@@ -13,36 +13,32 @@ public class OculusMove : MonoBehaviour
     private GameObject _camera;
     public float gravity = -20;
     float yVelocity = 0;
-    public float speed= 5.0f;
+    public float speed = 5.0f;
     float maxspeed = 5.0f;
-    public AudioSource swim;   
+    public AudioSource swim;
     public xrrigdamage _XRD;
     public damagexrrig1 _DXG;
     public rockdamage _RDG;
     public rockdamage1 _RDG1;
     public rockdamage2 _RDG2;
-
     public speedfast _SFT;
     private float count = 2f;
     private bool back;
+    private bool waterfall;
     //private bool fastfast;
     private bool swimming;
     //xrring의 이전 포지션;
     Vector3 latePosition;
-    Vector3 direction;
-
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
         if (body == null || body.isKinematic)
         {
-            return;           
+            return;
         }
 
         else
         {
-            //Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-            //body.velocity = pushDir * pushPower;
             Debug.Log("hit");
         }
 
@@ -51,8 +47,7 @@ public class OculusMove : MonoBehaviour
 
 
 
-        // Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-        //body.velocity = pushDir * pushPower;
+
     }
 
 
@@ -61,10 +56,10 @@ public class OculusMove : MonoBehaviour
 
     private void Awake()
     {
-        
+
         character = GetComponent<CharacterController>();
         _camera = GetComponent<XRRig>().cameraGameObject;
-        
+
 
 
 
@@ -72,16 +67,13 @@ public class OculusMove : MonoBehaviour
 
     private void Update()
     {
-        direction = Camera.main.transform.TransformDirection(direction);
+
         CommonInput();
         if (latePosition != transform.position)
         {
             Debug.Log("작동");
             swimming = true;
-            //if (swimming == true)
-            //{
-            //   swim.Play();
-            //}
+
             if (swim.isPlaying == false)
             {
                 swim.Play();
@@ -91,34 +83,24 @@ public class OculusMove : MonoBehaviour
         }
         else
         {
-            if(swim.isPlaying == true)
+            if (swim.isPlaying == true)
             {
                 swim.Stop();
             }
-            if(_SFT.fastrange == true)
-            {
-                character.Move(direction * Time.deltaTime * speed * 2);
-            }
+
         }
-        
 
-        //제일 마지막에 업데이트해줘야함
+
+
         latePosition = transform.position;
-        
 
 
 
-        //if (Input.GetKey("w"))
-        //{
-        //   if(speed < maxspeed)
-        // {
-        //     speed += 0.025f;
-        // }
 
-        //}
+
     }
-    
-    
+
+
 
     private void CommonInput()
     {
@@ -131,7 +113,7 @@ public class OculusMove : MonoBehaviour
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
             if (_XRD.inthefire == true)
             {
-                
+
                 character.Move(motion: newDirection * Time.deltaTime * -speed);
                 back = true;
             }
@@ -139,8 +121,9 @@ public class OculusMove : MonoBehaviour
             {
                 if (back == true)
                 {
+
                     character.Move(motion: newDirection * Time.deltaTime * -speed);
-                    
+
                     count -= Time.deltaTime;
                     if (count < 0)
                     {
@@ -155,13 +138,28 @@ public class OculusMove : MonoBehaviour
                     {
 
                         character.Move(motion: newDirection * Time.deltaTime * speed * 2);
+                        waterfall = true;
+                        if (waterfall == true)
+                        {
+
+                            character.Move(motion: newDirection * Time.deltaTime * speed * 2);
+                            count -= Time.deltaTime;
+                            if (count < 0)
+                            {
+                                waterfall = false;
+                                count = 2f;
+                            }
+                        }
+
+
+
 
                     }
                     else
                     {
                         character.Move(motion: newDirection * Time.deltaTime * speed);
                     }
-
+                    character.Move(motion: newDirection * Time.deltaTime * speed);
                 }
 
             }
@@ -174,10 +172,7 @@ public class OculusMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }
 
-        /*float H = Input.GetAxis("3rd axis");
-        float V = Input.GetAxis("4th axis");
-        Vector3 direction = new Vector3(H, 0, V);
-        transform.Rotate(direction * Time.deltaTime);*/
+
         //keyboard
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -192,23 +187,23 @@ public class OculusMove : MonoBehaviour
 
         if (_XRD.inthefire == true)
         {
-             
+
             character.Move(dir * Time.deltaTime * -speed);
-            //character.Move(motion: newDirection * Time.deltaTime * speed);
+
             back = true;
         }
         if (_DXG.inthefire == true)
         {
 
             character.Move(dir * Time.deltaTime * -speed);
-            //character.Move(motion: newDirection * Time.deltaTime * speed);
+
             back = true;
         }
         if (_RDG.inthefire == true)
         {
 
             character.Move(dir * Time.deltaTime * -speed);
-            
+
             back = true;
         }
         if (_RDG1.inthefire == true)
@@ -234,6 +229,7 @@ public class OculusMove : MonoBehaviour
                 if (dir.z >= 0)
                 {
                     dir.z = -1;
+                    dir.x = -0.5f;
                 }
                 character.Move(dir * Time.deltaTime * -speed);
                 count -= Time.deltaTime;
@@ -250,62 +246,45 @@ public class OculusMove : MonoBehaviour
                 {
 
                     character.Move(dir * Time.deltaTime * speed * 2);
+                    waterfall = true;
+                    if (waterfall == true)
+                    {
+                        dir.y = 0;
+                        if (dir.z >= 0)
+                        {
+                            dir.x = 1;
+                            dir.z = -1;
+                        }
+                        character.Move(dir * Time.deltaTime * speed * 2);
+                        count -= Time.deltaTime;
+                        if (count < 0)
+                        {
+                            waterfall = false;
+                            count = 2f;
+                        }
+                    }
+
+
+
 
                 }
                 else
                 {
                     character.Move(dir * Time.deltaTime * speed);
                 }
-                //character.Move(dir * Time.deltaTime * speed);
+
 
             }
-            
-            
-        }
-        /*if (_SFT.fastrange == true)
-        {
 
-            character.Move(dir * Time.deltaTime * speed * 2);
-            
-        }
-        else
-        {
-            character.Move(dir * Time.deltaTime * speed);
-        }*/
 
-        
+        }
+
+
+
 
 
     }
-    /*
-    public Animation anim;
 
-    private bool isWalking;
-    private Vector3 lastPosition;
 
-    private void CheckPosition()
-    {
-        if (lastPosition != gameObject.transform.position)
-        {
-            isWalking = true;
-        }
-        else
-        {
-            isWalking = false;
-        }
-        lastPosition = gameObject.transform.position;
-    }
-
-    void CameraAnimation()
-    {
-        if (character.isGrounded == true)
-        {
-            if (isWalking == true)
-            {
-                anim.Play("headbob");
-            }
-        }
-    }
-    */
 
 }
