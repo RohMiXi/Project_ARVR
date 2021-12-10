@@ -27,7 +27,7 @@ public class OculusMove : MonoBehaviour
     private bool waterfall;
     //private bool fastfast;
     private bool swimming;
-    //xrringÀÇ ÀÌÀü Æ÷Áö¼Ç;
+    //xrringï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
     Vector3 latePosition;
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -71,7 +71,7 @@ public class OculusMove : MonoBehaviour
         CommonInput();
         if (latePosition != transform.position)
         {
-            Debug.Log("ÀÛµ¿");
+            Debug.Log("ï¿½Ûµï¿½");
             swimming = true;
 
             if (swim.isPlaying == false)
@@ -163,12 +163,13 @@ public class OculusMove : MonoBehaviour
                     {
                         character.Move(motion: newDirection * Time.deltaTime * speed);
                     }
-                    character.Move(motion: newDirection * Time.deltaTime * speed);
+                    //character.Move(motion: newDirection * Time.deltaTime * speed);
                 }
 
             }
-            character.Move(motion: newDirection * Time.deltaTime * speed);
+            //character.Move(motion: newDirection * Time.deltaTime * speed);
         }
+        
         /*if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
 

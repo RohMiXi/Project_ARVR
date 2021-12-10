@@ -22,11 +22,11 @@ public class headrotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
+        /*if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
 
             float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, angle, 0);
-        }
+        }*/
     }
 }
