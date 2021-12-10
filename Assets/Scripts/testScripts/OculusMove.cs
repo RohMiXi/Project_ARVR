@@ -117,6 +117,34 @@ public class OculusMove : MonoBehaviour
                 character.Move(motion: newDirection * Time.deltaTime * -speed);
                 back = true;
             }
+            if (_DXG.inthefire == true)
+            {
+
+                character.Move(motion: newDirection * Time.deltaTime * -speed);
+
+                back = true;
+            }
+            if (_RDG.inthefire == true)
+            {
+
+                character.Move(motion: newDirection * Time.deltaTime * -speed);
+
+                back = true;
+            }
+            if (_RDG1.inthefire == true)
+            {
+
+                character.Move(motion: newDirection * Time.deltaTime * -speed); 
+
+                back = true;
+            }
+            if (_RDG2.inthefire == true)
+            {
+
+                character.Move(motion: newDirection * Time.deltaTime * -speed);
+
+                back = true;
+            }
             else
             {
                 if (back == true)
