@@ -33,7 +33,7 @@ public class headrotate : MonoBehaviour
             var inputVector = new Vector3(-pos.x, 0, z: -pos.y);
             float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
 
-            transform.Rotate(inputVector * angle);
+            transform.Rotate(inputVector * Time.deltaTime * angle);
         }
     }
 }
