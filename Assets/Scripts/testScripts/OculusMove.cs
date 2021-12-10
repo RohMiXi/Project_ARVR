@@ -137,12 +137,16 @@ public class OculusMove : MonoBehaviour
                     if (_SFT.fastrange == true)
                     {
 
-                        character.Move(motion: newDirection * Time.deltaTime * speed * 2);
+                        character.Move(motion: newDirection * Time.deltaTime * speed * 2.5f);
                         waterfall = true;
                         if (waterfall == true)
                         {
-
-                            character.Move(motion: newDirection * Time.deltaTime * speed * 2);
+                            if (newDirection.z >= 0)
+                            {
+                                newDirection.z = -1;
+                                newDirection.x = -0.5f;
+                            }
+                            character.Move(motion: newDirection * Time.deltaTime * speed * 2.5f);
                             count -= Time.deltaTime;
                             if (count < 0)
                             {
@@ -168,7 +172,7 @@ public class OculusMove : MonoBehaviour
         if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
 
-            float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(pos.x, -pos.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }
 
