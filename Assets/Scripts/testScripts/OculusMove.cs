@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class OculusMove : MonoBehaviour
 {
     public XRController controller = null;
-    public XRController rightcontroller;
+    public XRController rightcontroller = null;
     private CharacterController character;
     private GameObject _camera;
     public float gravity = -20;
