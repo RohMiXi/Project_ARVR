@@ -177,7 +177,7 @@ public class OculusMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }*/
 
-
+        /*
         //keyboard
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -283,6 +283,7 @@ public class OculusMove : MonoBehaviour
 
 
         }
+        */
 
 
 
