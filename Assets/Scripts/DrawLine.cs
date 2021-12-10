@@ -6,8 +6,10 @@ public class DrawLine : MonoBehaviour
 {
     public GameObject linePrefab;
     LineRenderer lr; // 라인을 그려주는 컴퍼넌트 'lr'추가 
-    EdgeCollider2D collider2D; // 라인에 적용되는 충돌체 적용 
+    //EdgeCollider2D collider2D; // 라인에 적용되는 충돌체 적용 
     List<Vector2> points = new List<Vector2>(); // 3d environmnent to draw a sign in panel.
+
+    /*
     void Update() {
         if(input.GetMouseButtonDown(0))
         {   
@@ -31,5 +33,5 @@ public class DrawLine : MonoBehaviour
         {
             points.Clear();
         }
-    }
+    } */
 }
