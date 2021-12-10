@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class rockdamage : MonoBehaviour
 {
-   
+    
     Transform XRRig;
     public float rockRange = 10;
     public bool inthefire;
@@ -14,7 +14,7 @@ public class rockdamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
         XRRig = GameObject.Find("XR Rig").transform;
     }
 
