@@ -5,7 +5,7 @@ using UnityEngine;
 public class speedfast : MonoBehaviour
 {
     Transform XRRig;
-    public float fastRange = 10;
+    public float fastRange = 2;
     public bool fastrange;
     // Start is called before the first frame update
     void Start()
