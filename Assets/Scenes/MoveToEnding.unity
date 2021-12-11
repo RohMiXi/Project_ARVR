@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63adcb760791b545b4870c8ab96d275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameInputField: {fileID: 2030892641}
+  NameInputField: {fileID: 0}
   Rest_people: {fileID: 1398894835}
   With_people: {fileID: 1486823163}
   data:
@@ -4562,16 +4562,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697369257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.77533}
-  m_LocalScale: {x: 0.90645415, y: 0.90645415, z: 0.90645415}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224745311318161770}
-  m_RootOrder: 2
+  m_Father: {fileID: 2030892640}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0022277832, y: 220.57764}
-  m_SizeDelta: {x: -230, y: -183}
+  m_AnchoredPosition: {x: 0, y: -0.49998474}
+  m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697369259
 MonoBehaviour:
@@ -4586,7 +4586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.9686424, b: 0.9686424, a: 0.5}
+  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0.5}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8822,7 +8822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63adcb760791b545b4870c8ab96d275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameInputField: {fileID: 2030892641}
+  NameInputField: {fileID: 633455478}
   Rest_people: {fileID: 1398894835}
   With_people: {fileID: 1486823163}
   data:
@@ -13103,7 +13103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787639171}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 917838f16ef07e54385fdf472de90bbd, type: 3}
   m_Name: 
@@ -14420,6 +14420,8 @@ GameObject:
   - component: {fileID: 2030892640}
   - component: {fileID: 2030892643}
   - component: {fileID: 2030892642}
+  - component: {fileID: 2030892644}
+  - component: {fileID: 2030892645}
   - component: {fileID: 2030892641}
   m_Layer: 5
   m_Name: InputName
@@ -14440,6 +14442,7 @@ RectTransform:
   m_LocalScale: {x: 0.3986199, y: 0.3986199, z: 0.3986199}
   m_Children:
   - {fileID: 633455477}
+  - {fileID: 697369258}
   m_Father: {fileID: 966996760}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14457,7 +14460,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2030892639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -14489,30 +14492,21 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2030892642}
-  m_TextComponent: {fileID: 633455478}
-  m_Placeholder: {fileID: 697369259}
-  m_ContentType: 5
-  m_InputType: 0
-  m_AsteriskChar: 42
-  m_KeyboardType: 6
-  m_LineType: 0
-  m_HideMobileInput: 0
-  m_CharacterValidation: 4
-  m_CharacterLimit: 0
-  m_OnEndEdit:
+  m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
-  m_CaretBlinkRate: 0.85
-  m_CaretWidth: 1
-  m_ReadOnly: 0
-  m_ShouldActivateOnSelect: 1
+      m_Calls:
+      - m_Target: {fileID: 2030892644}
+        m_TargetAssemblyTypeName: KeyManager, Assembly-CSharp
+        m_MethodName: iptOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2030892642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14551,6 +14545,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030892639}
   m_CullTransparentMesh: 1
+--- !u!114 &2030892644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030892639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3205997c20d44f859b464f4220583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyBoard: {fileID: 1326230399602406}
+  m_InputField: {fileID: 633455478}
+  KeyEditDone: 0
+  TextDone: 0
+--- !u!65 &2030892645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030892639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2084532377
 GameObject:
   m_ObjectHideFlags: 0
@@ -16118,7 +16141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305304099281350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
   m_Name: 
@@ -20087,19 +20110,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114614483260062126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: A
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &114312855128566906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20771,7 +20782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114947716171535164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114735952135501946}
+        m_TargetAssemblyTypeName: VRKeyboard.Utils.KeyboardManager, Assembly-CSharp
+        m_MethodName: GenerateInput
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enter
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &114417474363785116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22866,8 +22889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isUppercase: 0
   maxInputLength: 30
-  inputText: {fileID: 114853860344831398}
+  inputText: {fileID: 633455478}
   keys: {fileID: 224901141855884412}
+  _KM: {fileID: 2030892644}
 --- !u!114 &114738767541958806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26774,7 +26798,6 @@ RectTransform:
   m_Children:
   - {fileID: 224878625195204266}
   - {fileID: 224901141855884412}
-  - {fileID: 697369258}
   m_Father: {fileID: 224929679444107898}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

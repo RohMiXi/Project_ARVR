@@ -22,6 +22,7 @@ namespace VRKeyboard.Utils
 
         [Header("Essentials")]
         public Transform keys;
+        public KeyManager _KM;
         #endregion
 
         #region Private Variables
@@ -95,7 +96,17 @@ namespace VRKeyboard.Utils
         public void GenerateInput(string s)
         {
             if (Input.Length > maxInputLength) { return; }
-            Input += s;
+            if (s == "Enter")
+            {
+                _KM.KeyBoard.SetActive(false);
+                _KM.KeyEditDone = true;
+                _KM.TextDone = false;
+            }
+            else
+            {
+                Input += s;
+            }
+            Debug.Log(inputText.text);
         }
         #endregion
     }
