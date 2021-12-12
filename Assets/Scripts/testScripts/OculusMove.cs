@@ -149,13 +149,13 @@ public class OculusMove : MonoBehaviour
             {
                 if (back == true)
                 {
-
+                    newDirection.y = 0;
                     character.Move(motion: newDirection * Time.deltaTime * -speed);
-
+                    
                     count -= Time.deltaTime;
                     if (count < 0)
                     {
-                        newDirection.y = 0;
+                        
 
                         back = false;
                         count = 2f;
