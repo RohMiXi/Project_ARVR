@@ -150,6 +150,13 @@ public class OculusMove : MonoBehaviour
                 if (back == true)
                 {
                     newDirection.y = 0;
+                    if (newDirection.z >= 0)
+                    {
+                        newDirection.z = -1;
+                        newDirection.x = -0.5f;
+                    }                                        
+                    
+                    
                     character.Move(motion: newDirection * Time.deltaTime * -speed);
                     
                     count -= Time.deltaTime;
@@ -208,7 +215,7 @@ public class OculusMove : MonoBehaviour
 
         
         //keyboard
-        float h = Input.GetAxis("Horizontal");
+        /*float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         Vector3 dir = new Vector3(h, 0, v);
         dir = Camera.main.transform.TransformDirection(dir);
@@ -311,7 +318,7 @@ public class OculusMove : MonoBehaviour
             }
 
 
-        }
+        }*/
         
 
 
