@@ -10,7 +10,8 @@ public class BtnColorChange : MonoBehaviour
     public bool hoverStatus = false;
     public bool preHoverStatus = false;
     public GameObject Button;
-    public RaycastHit RayHit; 
+    public RaycastHit RayHit;
+    public RaycastHit RayHit2;  
     public GameObject _XRIL_L;
     public GameObject _XRIL_R;
     Renderer HitbtnMat;
@@ -108,12 +109,12 @@ public class BtnColorChange : MonoBehaviour
             btnMat5.material.SetColor("_EmissionColor", color * -1f);
         }
 
-        if(RightlineRenderable.TryGetCurrent3DRaycastHit(out RayHit))
+        if(RightlineRenderable.TryGetCurrent3DRaycastHit(out RayHit2))
         {
             Debug.Log(RayHit.collider.gameObject.name);
             //BtnSelect.Play();
 
-            if(RayHit.collider.gameObject.name == "StartBox")
+            if(RayHit2.collider.gameObject.name == "StartBox")
             {
                 hoverStatus = true;
                 btnMat1.material.SetColor("_EmissionColor", color * 0.01f);
@@ -122,7 +123,7 @@ public class BtnColorChange : MonoBehaviour
                 btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
                 btnMat5.material.SetColor("_EmissionColor", color * -1f);
             }
-            else if(RayHit.collider.gameObject.name == "GuideBox")
+            else if(RayHit2.collider.gameObject.name == "GuideBox")
             {
                 hoverStatus = true;
                 btnMat1.material.SetColor("_EmissionColor", color * -1f);
@@ -131,7 +132,7 @@ public class BtnColorChange : MonoBehaviour
                 btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
                 btnMat5.material.SetColor("_EmissionColor", color * -1f);
             }
-            else if(RayHit.collider.gameObject.name == "OptionBox")
+            else if(RayHit2.collider.gameObject.name == "OptionBox")
             {
                 hoverStatus = true;
                 btnMat1.material.SetColor("_EmissionColor", color * -1f);
@@ -140,7 +141,7 @@ public class BtnColorChange : MonoBehaviour
                 btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.01f);
                 btnMat5.material.SetColor("_EmissionColor", color * -1f);
             }
-            else if (RayHit.collider.gameObject.name == "ExitBox")
+            else if (RayHit2.collider.gameObject.name == "ExitBox")
             {
                 hoverStatus = true;
                 btnMat1.material.SetColor("_EmissionColor", color * -1f);
@@ -149,7 +150,7 @@ public class BtnColorChange : MonoBehaviour
                 btnMat4.material.SetColor("_EmissionColor", Exitcolor * 0.001f);
                 btnMat5.material.SetColor("_EmissionColor", color * -1f);
             }
-            else if (RayHit.collider.gameObject.name == "BackBox")
+            else if (RayHit2.collider.gameObject.name == "BackBox")
             {
                 hoverStatus = true;
                 btnMat1.material.SetColor("_EmissionColor", color * -1f);

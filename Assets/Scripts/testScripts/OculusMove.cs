@@ -113,6 +113,7 @@ public class OculusMove : MonoBehaviour
             var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
             if (_XRD.inthefire == true)
             {
+                newDirection.y = 0;
 
                 character.Move(motion: newDirection * Time.deltaTime * -speed);
                 back = true;
