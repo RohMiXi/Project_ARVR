@@ -155,6 +155,7 @@ public class OculusMove : MonoBehaviour
                     count -= Time.deltaTime;
                     if (count < 0)
                     {
+                        newDirection.y = 0;
 
                         back = false;
                         count = 2f;

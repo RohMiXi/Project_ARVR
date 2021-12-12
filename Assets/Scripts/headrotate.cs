@@ -30,10 +30,10 @@ public class headrotate : MonoBehaviour
         }*/
         if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
-            var inputVector = new Vector3(-pos.x, 0, z: -pos.y);
+            
             float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
-
-            transform.Rotate(inputVector * Time.deltaTime * angle);
+            angle = -(angle + 90);
+            transform.rotation = Quaternion.Euler(0, angle, 0);
         }
     }
 }
