@@ -208,7 +208,7 @@ public class OculusMove : MonoBehaviour
 
         
         //keyboard
-        float h = Input.GetAxis("Horizontal");
+        /*float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         Vector3 dir = new Vector3(h, 0, v);
         dir = Camera.main.transform.TransformDirection(dir);
@@ -311,7 +311,7 @@ public class OculusMove : MonoBehaviour
             }
 
 
-        }
+        }*/
         
 
 

@@ -31,8 +31,8 @@ public class headrotate : MonoBehaviour
         if (rightcontroller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 pos))
         {
             
-            float angle = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
-            angle = -(angle + 90);
+            float angle = Mathf.Atan2( pos.y,pos.x) * Mathf.Rad2Deg;
+            
             transform.rotation = Quaternion.Euler(0, angle, 0);
         }
     }
