@@ -175,7 +175,7 @@ public class OculusMove : MonoBehaviour
                     {
 
                         character.Move(motion: newDirection * Time.deltaTime * speed * 2.5f);
-                        waterfall = true;
+                        waterfall = true; 
                         if (waterfall == true)
                         {
                             if (newDirection.z >= 0)
@@ -216,7 +216,7 @@ public class OculusMove : MonoBehaviour
 
         
         //keyboard
-        /*float h = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         Vector3 dir = new Vector3(h, 0, v);
         dir = Camera.main.transform.TransformDirection(dir);
@@ -319,7 +319,7 @@ public class OculusMove : MonoBehaviour
             }
 
 
-        }*/
+        }
         
 
 
